@@ -1,13 +1,17 @@
-# SENT_Tool (CLI)
+# SENT Tool (CLI) – Mach Systems SAE J2716 Interface
 
-Python CLI to decode Mach SAE J2716 Interface Tool CSV exports into human-readable values
-for sensor i2s Dresden #803405 (IPT1866 30 bar new).
+Dieses Tool liest SENT (Fast/Slow/Error) **direkt vom Mach Systems SAE J2716 Interface** (Serial/USB-VCP oder TCP)
+und gibt die Daten **live human-readable** auf der Konsole aus.
 
-## Setup
+Optional kann das Tool:
+- **RAW** (wie empfangen, volle framed packets) mitschreiben
+- **Decoded CSV** (menschenlesbar) mitschreiben
 
-```bash
-cd SENT_Tool
+## Installation
+
+Aktiviere dein venv und installiere Requirements:
+
+```powershell
 python -m venv .venv
-# Windows:
 .venv\Scripts\activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
