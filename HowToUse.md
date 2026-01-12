@@ -70,6 +70,12 @@ Stoppen mit **Ctrl + C**.
 
 ---
 
+## Chanel auswahl als Argument
+--channel 0
+## Oder Alle SENT Kanäle
+--all-channels
+
+
 ## 5) Live lesen (Standard)
 
 ### Verbindung über Serial (COM-Port)
@@ -175,27 +181,6 @@ python -m sent_tool.cli live --serial COM7 --baud 115200 --channel 0 `
 
 ---
 
-## 12) Hilfe anzeigen (alle Optionen)
-
-```powershell
-python -m sent_tool.cli -h
-python -m sent_tool.cli live -h
-```
-
----
-
-## 13) Typische Probleme & Lösungen
-
-### `ModuleNotFoundError: No module named 'serial'`
-```powershell
-python -m pip install pyserial
-```
-
-### „Access is denied“ bei pip
-Nutze:
-```powershell
-python -m pip install -r requirements.txt
-```
 
 ### Keine Daten kommen rein
 1. SEA Tool geschlossen? (COM-Port frei)
@@ -235,10 +220,4 @@ python -m sent_tool.cli live --serial COM7 --baud 115200 --channel 0
 **Nur Logging ohne Konsole:**
 ```powershell
 --quiet
-```
-
-**Stop nach Zeit / Anzahl:**
-```powershell
---duration 10
---count 1000
 ```
